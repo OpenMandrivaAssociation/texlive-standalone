@@ -1,11 +1,11 @@
-# revision 22017
+# revision 24894
 # category Package
 # catalog-ctan /macros/latex/contrib/standalone
-# catalog-date 2011-04-07 23:51:14 +0200
+# catalog-date 2011-12-21 17:50:29 +0100
 # catalog-license lppl1.3
-# catalog-version 0.4a
+# catalog-version 1.0
 Name:		texlive-standalone
-Version:	0.4a
+Version:	1.0
 Release:	1
 Summary:	Compile TeX pictures stand-alone or as part of a document
 Group:		Publishing
@@ -18,8 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 A class and package is provided which allows TeX pictures or
@@ -33,19 +31,19 @@ behaviour in standalone mode may adjusted using a configuration
 file standalone.cfg to redefine the standalone environment.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -53,11 +51,10 @@ file standalone.cfg to redefine the standalone environment.
 %{_texmfdistdir}/tex/latex/standalone/standalone.cfg
 %{_texmfdistdir}/tex/latex/standalone/standalone.cls
 %{_texmfdistdir}/tex/latex/standalone/standalone.sty
-%{_texmfdistdir}/tex/latex/standalone/standalone.tex
+%{_texmfdistdir}/tex/plain/standalone/standalone.tex
+%doc %{_texmfdistdir}/doc/latex/standalone/README
 %doc %{_texmfdistdir}/doc/latex/standalone/standalone.pdf
 #- source
-%doc %{_texmfdistdir}/source/latex/standalone/Makefile
-%doc %{_texmfdistdir}/source/latex/standalone/README
 %doc %{_texmfdistdir}/source/latex/standalone/standalone.dtx
 %doc %{_texmfdistdir}/source/latex/standalone/standalone.ins
 %doc %{_tlpkgobjdir}/*.tlpobj
