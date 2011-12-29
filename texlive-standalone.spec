@@ -30,16 +30,8 @@ package is used to display the code without margins. The
 behaviour in standalone mode may adjusted using a configuration
 file standalone.cfg to redefine the standalone environment.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -57,7 +49,6 @@ file standalone.cfg to redefine the standalone environment.
 #- source
 %doc %{_texmfdistdir}/source/latex/standalone/standalone.dtx
 %doc %{_texmfdistdir}/source/latex/standalone/standalone.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,5 +59,3 @@ file standalone.cfg to redefine the standalone environment.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
