@@ -1,11 +1,11 @@
-# revision 26511
+# revision 27677
 # category Package
 # catalog-ctan /macros/latex/contrib/standalone
-# catalog-date 2012-05-20 20:33:03 +0200
+# catalog-date 2012-09-15 20:44:35 +0200
 # catalog-license lppl1.3
-# catalog-version 1.1a
+# catalog-version 1.1b
 Name:		texlive-standalone
-Version:	1.1a
+Version:	1.1b
 Release:	1
 Summary:	Compile TeX pictures stand-alone or as part of a document
 Group:		Publishing
