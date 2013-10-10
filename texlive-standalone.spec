@@ -1,11 +1,11 @@
-# revision 26511
+# revision 27677
 # category Package
 # catalog-ctan /macros/latex/contrib/standalone
-# catalog-date 2012-05-20 20:33:03 +0200
+# catalog-date 2012-09-15 20:44:35 +0200
 # catalog-license lppl1.3
-# catalog-version 1.1a
+# catalog-version 1.1b
 Name:		texlive-standalone
-Version:	1.1a
+Version:	1.1b
 Release:	1
 Summary:	Compile TeX pictures stand-alone or as part of a document
 Group:		Publishing
@@ -59,33 +59,3 @@ file standalone.cfg to redefine the standalone environment.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1a-1
-+ Revision: 812881
-- Update to latest release.
-
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
-+ Revision: 805078
-- Update to latest release.
-
-* Fri Apr 13 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
-+ Revision: 790738
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 756167
-- Rebuild to reduce used resources
-
-* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 745308
-- texlive-standalone
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.4a-1
-+ Revision: 719577
-- texlive-standalone
-- texlive-standalone
-- texlive-standalone
-- texlive-standalone
-
