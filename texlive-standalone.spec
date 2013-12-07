@@ -6,7 +6,7 @@
 # catalog-version 1.1b
 Name:		texlive-standalone
 Version:	1.1b
-Release:	4
+Release:	5
 Summary:	Compile TeX pictures stand-alone or as part of a document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/standalone
