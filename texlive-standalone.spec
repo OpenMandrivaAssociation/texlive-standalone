@@ -5,7 +5,7 @@
 # catalog-license lppl1.3
 # catalog-version 1.1b
 Name:		texlive-standalone
-Version:	1.2
+Version:	1.3a
 Release:	1
 Summary:	Compile TeX pictures stand-alone or as part of a document
 Group:		Publishing
