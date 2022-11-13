@@ -1,19 +1,13 @@
-# revision 27677
-# category Package
-# catalog-ctan /macros/latex/contrib/standalone
-# catalog-date 2012-09-15 20:44:35 +0200
-# catalog-license lppl1.3
-# catalog-version 1.1b
 Name:		texlive-standalone
-Version:	1.3a
-Release:	2
+Version:	64677
+Release:	1
 Summary:	Compile TeX pictures stand-alone or as part of a document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/standalone
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/standalone.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/standalone.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/standalone.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/standalone.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/standalone.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/standalone.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,28 +25,24 @@ behaviour in standalone mode may adjusted using a configuration
 file standalone.cfg to redefine the standalone environment.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/standalone/standalone.cfg
-%{_texmfdistdir}/tex/latex/standalone/standalone.cls
-%{_texmfdistdir}/tex/latex/standalone/standalone.sty
-%{_texmfdistdir}/tex/plain/standalone/standalone.tex
-%doc %{_texmfdistdir}/doc/latex/standalone/README
-%doc %{_texmfdistdir}/doc/latex/standalone/standalone.pdf
+%{_texmfdistdir}/tex/latex/standalone
+%doc %{_texmfdistdir}/doc/latex/standalone
 #- source
-%doc %{_texmfdistdir}/source/latex/standalone/standalone.dtx
-%doc %{_texmfdistdir}/source/latex/standalone/standalone.ins
+%doc %{_texmfdistdir}/source/latex/standalone
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
