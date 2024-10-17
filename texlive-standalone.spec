@@ -3,7 +3,7 @@ Version:	64677
 Release:	2
 Summary:	Compile TeX pictures stand-alone or as part of a document
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/standalone
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/standalone
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/standalone.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/standalone.doc.r%{version}.tar.xz
