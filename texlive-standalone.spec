@@ -1,6 +1,6 @@
 Name:		texlive-standalone
-Version:	64677
-Release:	2
+Version:	74247
+Release:	1
 Summary:	Compile TeX pictures stand-alone or as part of a document
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/standalone
